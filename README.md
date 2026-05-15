@@ -193,7 +193,7 @@ Live app: [merchantpay.qie.digital](#) <!-- Add your deployed URL here -->
 
 Built solo for the **QIE Blockchain Hackathon 2026**.
 
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+- GitHub: [@teethaking](https://github.com/teethaking)
 - QIE Developer Telegram: [t.me/+PyP385qw3qNkOTE1](https://t.me/+PyP385qw3qNkOTE1)
 
 ---
