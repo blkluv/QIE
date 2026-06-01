@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "installCommand": "npm install && ls -laR frontend && npm --prefix frontend install",
+  "installCommand": "npm install && ls -la && npm --prefix frontend install",
   "buildCommand": "npm --prefix frontend run build",
   "outputDirectory": "frontend/.next",
   "framework": "nextjs",
