@@ -92,7 +92,7 @@ export default function OnboardingPage() {
           <h1 className="text-4xl font-black tracking-tight text-white">Run your whole business in one space.</h1>
           <p className="mt-3 text-sm leading-6 text-white/60">
             A wallet identity, instant QR checkout. Find your 3 word address at{" "}
-            <a href="https://rwatok.land" className="text-white/80 hover:text-white underline transition-colors" target="_blank" rel="noopener noreferrer">rwatok.land</a>
+            <a href="https://rwatok.land" className="text-white/80 hover:text-white underline transition-colors" target="_blank" rel="noopener noreferrer">RWATok.land</a>
             ,{" "}
             <button type="button" onClick={addQIENetwork} className="text-white/80 hover:text-white underline transition-colors bg-transparent border-none cursor-pointer text-sm">add QIE Network to MetaMask</button>
             , and every proof of biz paid with QIE is documented in one place.
