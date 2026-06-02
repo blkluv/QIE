@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "QIE MerchantPay",
-  description: "Mobile-first QIE crypto point-of-sale app for merchants.",
+  title: "QIE Pay",
+  description: "Mobile-first QIE crypto point-of-sale app for business owners.",
 };
 
 export default function RootLayout({ children }) {
