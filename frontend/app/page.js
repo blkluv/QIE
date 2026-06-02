@@ -95,7 +95,7 @@ export default function OnboardingPage() {
             <a href="https://rwatok.land" className="text-white/80 hover:text-white underline transition-colors" target="_blank" rel="noopener noreferrer">RWATok.land</a>
             ,{" "}
             <button type="button" onClick={addQIENetwork} className="text-white/80 hover:text-white underline transition-colors bg-transparent border-none cursor-pointer text-sm">add QIE Network to MetaMask</button>
-            , and every proof of biz paid with QIE is documented in one place.
+            , and every proof of biz paid with QIE is documented in one <a href="https://blkluv.org/tribe/s/qie-pay/" className="text-white/80 hover:text-white underline transition-colors" target="_blank" rel="noopener noreferrer">space</a>.
           </p>
         </div>
 
