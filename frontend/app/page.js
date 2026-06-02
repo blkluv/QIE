@@ -114,11 +114,11 @@ export default function OnboardingPage() {
           )}
 
           <label className="block">
-            <span className="mb-2 block text-sm font-medium text-white/70">Merchant store name</span>
+            <span className="mb-2 block text-sm font-medium text-white/70">Merchant store name or 3 Word Addy</span>
             <input
               value={storeName}
               onChange={(event) => setStoreName(event.target.value)}
-              placeholder="Agbaji Coffee Bar"
+              placeholder="Hahz Coffee Bar or ///keep.it.simple"
               className="w-full rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-4 text-white outline-none transition placeholder:text-white/25 focus:border-qie/70"
             />
           </label>
