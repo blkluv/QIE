@@ -12,6 +12,32 @@ export default function OnboardingPage() {
   const [error, setError] = useState("");
   const [connecting, setConnecting] = useState(false);
 
+  const addQIENetwork = async () => {
+    if (!window.ethereum) {
+      alert('Please install MetaMask first');
+      return;
+    }
+
+    try {
+      await window.ethereum.request({
+        method: 'wallet_addEthereumChain',
+        params: [{
+          chainId: `0x${parseInt(process.env.NEXT_PUBLIC_QIE_CHAIN_ID).toString(16)}`,
+          chainName: 'QIE Network',
+          nativeCurrency: {
+            name: 'QIE',
+            symbol: 'QIE',
+            decimals: 18
+          },
+          rpcUrls: [process.env.NEXT_PUBLIC_QIE_RPC_URL],
+          blockExplorerUrls: ['https://explorer.qie.digital']
+        }]
+      });
+    } catch (error) {
+      console.error('Failed to add QIE Network:', error);
+    }
+  };
+
   useEffect(() => {
     // If the merchant already onboarded, keep the register one tap away.
     const existingSession = localStorage.getItem("qieMerchantSession");
@@ -61,11 +87,15 @@ export default function OnboardingPage() {
       <section className="rounded-[2rem] border border-white/10 bg-panel/80 p-6 shadow-glow backdrop-blur">
         <div className="mb-8">
           <p className="mb-3 inline-flex rounded-full border border-qie/30 bg-qie/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-qie">
-            QIE MerchantPay
+            QIE Pay
           </p>
-          <h1 className="text-4xl font-black tracking-tight text-white">Accept QIE at the counter.</h1>
+          <h1 className="text-4xl font-black tracking-tight text-white">Run your whole business in one space.</h1>
           <p className="mt-3 text-sm leading-6 text-white/60">
-            Wallet identity, instant QR checkout, local-only transaction history.
+            A wallet identity, instant QR checkout. Find your 3 word address at{" "}
+            <a href="https://rwatok.land" className="text-white/80 hover:text-white underline transition-colors" target="_blank" rel="noopener noreferrer">rwatok.land</a>
+            ,{" "}
+            <button type="button" onClick={addQIENetwork} className="text-white/80 hover:text-white underline transition-colors bg-transparent border-none cursor-pointer text-sm">add QIE Network to MetaMask</button>
+            , and every proof of biz paid with QIE is documented in one place.
           </p>
         </div>
 
